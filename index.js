@@ -25,9 +25,6 @@ app.post('/read', upload.single('image'), async (req, res) => {
   }
 });
 
-// app.listen(3000, () => {
-//   console.log('Server is running on port 3000');
-// });
 
 app.listen(port, "0.0.0.0", function () {
   console.log(`Server is running on port ${port}`);
