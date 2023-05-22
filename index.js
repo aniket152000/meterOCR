@@ -8,7 +8,7 @@ const port = process.env.PORT || 3000;
 
 const upload = multer({ dest: 'uploads/' });
 
-app.post('/meter/read', upload.single('image'), async (req, res) => {
+app.post('/read', upload.single('image'), async (req, res) => {
   try {
     const imagePath = req.file.path;
     const result = await Tesseract.recognize(imagePath, 'eng', {
